@@ -22,12 +22,9 @@ class HomePage extends StatelessWidget {
          
           TitleTile('Recomended'),
            Container(
-                      height: 200,
+                      height: 280,
                       width: double.infinity,
-                       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: Colors.green
-        ),
+         
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                       itemCount: Plant.plants.length,
