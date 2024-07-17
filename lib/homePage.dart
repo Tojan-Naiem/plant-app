@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
          
           TitleTile('Recomended'),
            Container(
-                      height: 280,
+                      height: 290,
                       width: double.infinity,
          
                       child: ListView.builder(
