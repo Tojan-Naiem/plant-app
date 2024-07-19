@@ -18,7 +18,7 @@ class _CardPlantState extends State<CardPlant> {
     return GestureDetector(
       onTap: (){
           Navigator.push(context,MaterialPageRoute(builder: (context)=>
-                DetalisPage(widget.title,widget.image,widget.country,widget.price)));
+                DetalisPage(widget.title,widget.image,widget.price,widget.country)));
 
       },
      child: Padding(padding: EdgeInsets.all(25),

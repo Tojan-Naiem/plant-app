@@ -17,7 +17,7 @@ class Head extends StatelessWidget {
                     height: 250,
                     width: double.infinity,
                     decoration:const BoxDecoration(
-                      color: Color(0xFF0C9869),
+                      color: Color.fromRGBO(12, 152, 105, 1),
                       borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25),bottomRight: Radius.circular(25))
                     ),
                     child: Column(
@@ -57,8 +57,6 @@ class Head extends StatelessWidget {
                     ),
                   ),
                    Positioned(
-                    bottom: 300,
-
                    
                     child: SearchBox(),
                     

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/detalisPageWidgets/edgeColumn.dart';
+import 'package:plant_app/detalisPageWidgets/iconCard.dart';
+import 'package:plant_app/detalisPageWidgets/image.dart';
 import 'package:plant_app/homePage.dart';
 
 class Body extends StatefulWidget {
@@ -20,6 +23,7 @@ class _BodyState extends State<Body> {
        Size size=MediaQuery.of(context).size;
     return SingleChildScrollView( 
       child: Column( 
+        crossAxisAlignment: CrossAxisAlignment.start,
 
         children: [ 
 
@@ -27,47 +31,81 @@ class _BodyState extends State<Body> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [ 
-              IconButton(onPressed: (){
-               Navigator.push(context,MaterialPageRoute(builder: (context)=>
-                HomePage()));
-
-              }
-              ,
-              icon: Icon(Icons.arrow_back,color: Colors.black,)),
-              Container( 
-                width:size.width*0.75,
-                height: size.height*0.8,
-                decoration: BoxDecoration( 
-                   boxShadow: [
-                       BoxShadow(
-                        offset: Offset(0,10),
-                        blurRadius: 50,
-                        color:  Color(0xFF0C9869).withOpacity(0.5),
-                       )
-                       ],
-                  image: DecorationImage(image: AssetImage(widget.image!),fit: BoxFit.cover,alignment: Alignment.center),
-                  borderRadius:const BorderRadius.only( 
-                    topLeft: Radius.circular(10),
-                    bottomLeft: Radius.circular(25),
-                    bottomRight: Radius.circular(25),
-                  )
-                ),
-                child: Column(
-
-                  children: [ 
-                    Align( 
-                      alignment: Alignment.topRight,
-                      child: IconButton(onPressed: (){}, icon: Icon(Icons.menu_rounded,color: Colors.black,))
-
-                    ),
-
-                  ],
-                ),
-              ),
-             
+               EdgeColumn(),
+               ImageSection(image: widget.image!,),
+    
 
             ],
+          ),
+          const SizedBox(height: 20,),
+          Row( 
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(padding:  EdgeInsets.only(left: 15),
+              child: Text(widget.title!,style: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold),),
+              ),
+              Padding(padding:  EdgeInsets.only(right: 15),
+              child: Text('\$'+widget.price!,style: TextStyle(color: Color(0xFF0C9869),fontSize: 25,fontWeight: FontWeight.normal),),
+              ),
+            ],
+          ),
+          Padding(padding: const EdgeInsets.only(top: 5,left: 20),
+          child: Text(widget.country!,style: TextStyle(color: Color(0xFF0C9869).withOpacity(0.5),fontSize: 23,fontWeight: FontWeight.w400 ),),
+          ),
+          Row( 
+            children: [ 
+    GestureDetector( 
+            onTap: (){},
+            child:Align(
+              alignment: Alignment.bottomLeft,
+              child:   Container( 
+                margin: const EdgeInsets.only(top: 15),
+              height: 70,
+              width: 200,
+              decoration: BoxDecoration(
+                color: Color(0xFF0C9869),
+                borderRadius: BorderRadius.only(topRight: Radius.circular(20))
+              ),
+              child: Align( 
+                alignment: Alignment.center,
+                child:Text('Buy now',style: TextStyle(color: Colors.white,fontSize: 17),),
+
+              )
+            ),
+            )
+           
+          ),
+              GestureDetector( 
+            onTap: (){},
+            child:Align(
+              alignment: Alignment.bottomRight,
+              child:   Container( 
+                margin: const EdgeInsets.only(top: 15),
+              height: 70,
+              width: 211,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(20))
+              ),
+              child: Align( 
+                alignment: Alignment.center,
+                child:Text('Buy now',style: TextStyle(color: Colors.black,fontSize: 17),),
+
+              )
+            ),
+            )
+           
           )
+
+        
+
+              
+            ],
+          )
+
+      
+
+
         ],
       ),
 
