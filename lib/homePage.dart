@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/models/plant.dart';
-import 'package:plant_app/widget/card.dart';
-import 'package:plant_app/widget/cardFeatured.dart';
-import 'package:plant_app/widget/head.dart';
-import 'package:plant_app/widget/searchBox.dart';
-import 'package:plant_app/widget/titleTile.dart';
+import 'package:plant_app/homePageWidgets/card.dart';
+import 'package:plant_app/homePageWidgets/cardFeatured.dart';
+import 'package:plant_app/homePageWidgets/head.dart';
+import 'package:plant_app/homePageWidgets/searchBox.dart';
+import 'package:plant_app/homePageWidgets/titleTile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -47,13 +47,13 @@ class HomePage extends StatelessWidget {
                       width: double.infinity,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                      itemCount: Plant.plants.length,
+                      itemCount: Plant.featuredPlants.length,
                       itemBuilder:(context,index){
                         return CardFeatured(
-                         title: Plant.plants[index].title,
-                         image: Plant.plants[index].image,
-                         price: Plant.plants[index].price,
-                         country: Plant.plants[index].country,
+                         title: Plant.featuredPlants[index].title,
+                         image: Plant.featuredPlants[index].image,
+                         price: Plant.featuredPlants[index].price,
+                         country: Plant.featuredPlants[index].country,
 
                         ); 
                       }

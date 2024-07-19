@@ -20,19 +20,29 @@ class SearchBox extends StatelessWidget {
                        )
                        ]
                       ),
-                      child:const  Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [ 
-                          Padding(
-                            padding: EdgeInsets.only(left: 20),
-                            child: Text('Search',style: TextStyle(fontSize: 15,color: Colors.grey),),
-                             ),
-                             Padding(
-                              padding:  EdgeInsets.only(right: 20),
-                              child: Icon(Icons.search,color: Colors.grey,),
-                              )
-                        ],
-                      ),
+                      child:const Padding(
+
+                        padding:  EdgeInsets.only(left:7,top: 5),
+                        child:    TextField(
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          suffixIcon: Icon(Icons.search,color: Color.fromRGBO(151, 154, 157, 1) ,),
+          hintText: '   Search',
+          suffixStyle: TextStyle(color: Colors.black),
+          
+          hintStyle: TextStyle(
+            color:  Color.fromRGBO(151, 154, 157, 1),
+            fontWeight: FontWeight.normal,
+            
+          )
+        ),
+        autofocus: true,
+        style:  TextStyle(color: Colors.black),
+        textAlign: TextAlign.justify,
+        )
+                      )
+                      
+                     
                     );
   }
 }

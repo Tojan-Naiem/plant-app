@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plant_app/widget/searchBox.dart';
+import 'package:plant_app/homePageWidgets/searchBox.dart';
 
 class Head extends StatelessWidget {
   const Head({super.key});
@@ -10,13 +10,12 @@ class Head extends StatelessWidget {
 
     return     Container(
       margin: EdgeInsets.only(bottom: 20 * 2.5),
-      // It will cover 20% of our total height
       height: size.height *0.35,
             child: Stack(
               children: [
                   Container(
                     height: 250,
-                    width: 500,
+                    width: double.infinity,
                     decoration:const BoxDecoration(
                       color: Color(0xFF0C9869),
                       borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25),bottomRight: Radius.circular(25))
@@ -58,6 +57,9 @@ class Head extends StatelessWidget {
                     ),
                   ),
                    Positioned(
+                    bottom: 300,
+
+                   
                     child: SearchBox(),
                     
                     ),
