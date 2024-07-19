@@ -24,7 +24,7 @@ class _CardPlantState extends State<CardPlant> {
        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17),
           color: Colors.white,
-          boxShadow: [ 
+           boxShadow: [ 
                        BoxShadow(
 
                         offset: Offset(0,10),
@@ -32,6 +32,7 @@ class _CardPlantState extends State<CardPlant> {
                         color:  Color(0xFF0C9869).withOpacity(0.5),
                        )
                        ]
+         
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,7 +58,7 @@ class _CardPlantState extends State<CardPlant> {
                     children: [ 
                       TextSpan(
                         text: widget.title!.toUpperCase(),
-                        style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,fontSize: 12
+                        style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w400,fontSize: 12
                         ))
                     ]
                   )
@@ -77,7 +78,7 @@ class _CardPlantState extends State<CardPlant> {
               padding: const EdgeInsets.only(left: 7),
              
              child: Text(widget.country!,style: TextStyle(color: Color(0xFF0C9869).withOpacity(0.5),fontWeight: FontWeight.normal),),
-             )
+             ),
              
           ],
         ),
