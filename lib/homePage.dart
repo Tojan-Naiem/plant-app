@@ -66,6 +66,20 @@ class HomePage extends StatelessWidget {
           ],
         )
       ),
+      bottomNavigationBar: Container(
+        height: 60,
+        decoration: BoxDecoration( 
+          color: Colors.white
+        ),
+        child: Row( 
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [ 
+             IconButton(onPressed: (){}, icon: ImageIcon(AssetImage('images/plant.png'),color: Color(0xFF0C9869),size: 30,)),
+             IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border,size: 30,)),
+             IconButton(onPressed: (){}, icon: Icon(Icons.person_2_outlined,size: 30,)),
+          ],
+        ),
+      ),
  
     );
   }

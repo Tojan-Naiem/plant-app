@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/detalisPage.dart';
 
 class CardFeatured extends StatefulWidget {
   CardFeatured({ this.title,this.image,this.price,this.country,super.key});
@@ -15,7 +16,11 @@ class _CardFeaturedState extends State<CardFeatured> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: (){
+        Navigator.push(context,MaterialPageRoute(builder: (context)=>
+                DetalisPage(widget.title,widget.image,widget.price,widget.country)));
+
+      },
      child: Padding(padding: EdgeInsets.all(15),
 
       child: Container(

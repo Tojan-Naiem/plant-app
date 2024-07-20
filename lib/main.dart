@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/SearchPage.dart';
 import 'package:plant_app/homePage.dart';
 
 void main() {
@@ -8,7 +9,7 @@ void main() {
       theme:  ThemeData.dark().copyWith(
     
     ),
-    home: HomePage(),
+    home: SearchPage(),
     )
   );
 }
