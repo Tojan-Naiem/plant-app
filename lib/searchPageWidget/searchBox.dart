@@ -11,13 +11,15 @@ class _SearchBoxState extends State<SearchBox> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      width: 200,
+      height: 43,
+      width: 320,
       decoration: BoxDecoration( 
-        borderRadius: BorderRadius.circular(15),
-        color: Colors.grey
+        borderRadius: BorderRadius.circular(20),
+        color: const Color.fromARGB(255, 203, 201, 201)
       ),
-      child: TextField( 
+      child: Align( 
+        alignment: Alignment.center,
+        child: TextField( 
         decoration: InputDecoration( 
           border: InputBorder.none,
           hintText: 'Search',
@@ -25,6 +27,8 @@ class _SearchBoxState extends State<SearchBox> {
         ),
         textAlign: TextAlign.center,
       ),
+      )
+      
     );
   }
 }
